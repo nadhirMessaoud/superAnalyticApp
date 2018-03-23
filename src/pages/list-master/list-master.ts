@@ -36,6 +36,10 @@ export class ListMasterPage {
     addModal.present();
   }
 
+  goToPlatforms(){
+    this.navCtrl.push('PlatformPage');
+
+  }
   /**
    * Delete an item from the list of items.
    */

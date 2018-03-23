@@ -19,6 +19,9 @@ export class WelcomePage {
   login() {
     this.navCtrl.push('LoginPage');
   }
+  startFt(){
+  this.navCtrl.push('TabsPage');
+}
 
   signup() {
     this.navCtrl.push('SignupPage');

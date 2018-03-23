@@ -1,4 +1,5 @@
-<ion-header>
+
+  <ion-header>
 
   <ion-navbar>
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
@@ -12,9 +13,384 @@
 
 </ion-header>
 
+<!--
+<html ng-app="ionicApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <title>Tabs Example</title>
+
+  <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+  <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+</head>
+
+<body ng-app="ionicApp">
+
+<script id="templates/home.html" type="text/ng-template">
+  <ion-view view-title="Starting ...">
+    <ion-content class="padding">
+        <h1> Welcome there !</h1>
+        <p></p>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/cat">Find my tool!</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+
+
+
+<script id="templates/cat.html" type="text/ng-template">
+  <ion-view view-title="Catégories">
+    <ion-content class="padding">
+        <h1> Categories</h1>
+        <ion-list>
+
+          <ion-item>
+            <ion-label>Jeux</ion-label>
+            <ion-checkbox [(ngModel)]="jeux"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Catégorie 3</ion-label>
+            <ion-checkbox [(ngModel)]="cat" disabled="true"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Communication</ion-label>
+            <ion-checkbox [(ngModel)]="com"></ion-checkbox>
+          </ion-item>
+        
+        </ion-list>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/platforms">add categories</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+
+<script id="templates/platforms.html" type="text/ng-template">
+  <ion-view view-title="Plateformes">
+    <ion-content class="padding">
+      <h1> Plateformes</h1>
+      <ion-list>
+
+        <ion-item>
+          <ion-label>Android</ion-label>
+          <ion-checkbox [(ngModel)]="Android"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Apple iOS</ion-label>
+          <ion-checkbox [(ngModel)]="ios" disabled="true"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Unity</ion-label>
+          <ion-checkbox [(ngModel)]="unity"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Windows Phone</ion-label>
+          <ion-checkbox [(ngModel)]="wp"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>C++</ion-label>
+          <ion-checkbox [(ngModel)]="cpp"></ion-checkbox>
+        </ion-item>
+
+      </ion-list>
+
+
+      <ul class = "list">
+        <li class = "item item-checkbox checkbox-light">
+           Checbox 1
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     
+        <li class = "item item-checkbox checkbox-stable">
+           Checkbox 2
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     
+        <li class = "item item-checkbox  checkbox-positive">
+           Checkbox 3
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     
+        <li class = "item item-checkbox  checkbox-calm">
+           Checkbox 4
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     
+        <li class = "item item-checkbox  checkbox-balanced">
+           Checkbox 5
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     
+        <li class = "item item-checkbox  checkbox-energized">
+           Checkbox 6
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     
+        <li class = "item item-checkbox  checkbox-assertive">
+           Checkbox 7
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     
+        <li class = "item item-checkbox  checkbox-royal">
+           Checkbox 8
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     
+        <li class = "item item-checkbox  checkbox-dark">
+           Checkbox 9
+           <label class = "checkbox">
+              <input type = "checkbox" />
+           </label>
+        </li>
+     </ul><ul class = "list">
+      <li class = "item item-checkbox checkbox-light">
+         Checbox 1
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   
+      <li class = "item item-checkbox checkbox-stable">
+         Checkbox 2
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   
+      <li class = "item item-checkbox  checkbox-positive">
+         Checkbox 3
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   
+      <li class = "item item-checkbox  checkbox-calm">
+         Checkbox 4
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   
+      <li class = "item item-checkbox  checkbox-balanced">
+         Checkbox 5
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   
+      <li class = "item item-checkbox  checkbox-energized">
+         Checkbox 6
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   
+      <li class = "item item-checkbox  checkbox-assertive">
+         Checkbox 7
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   
+      <li class = "item item-checkbox  checkbox-royal">
+         Checkbox 8
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   
+      <li class = "item item-checkbox  checkbox-dark">
+         Checkbox 9
+         <label class = "checkbox">
+            <input type = "checkbox" />
+         </label>
+      </li>
+   </ul>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/users"> add platforms</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+
+<script id="templates/users.html" type="text/ng-template">
+  <ion-view view-title="Nombre d'utilisateurs">
+    <ion-content class="padding">
+        <h1> Nombre d'utilisateurs</h1>
+        <ion-list>
+          <ion-item>
+            <ion-range [(ngModel)]="singleValue" color="danger" pin="true"></ion-range>
+          </ion-item>
+        
+          <ion-item>
+            <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+              <ion-label range-left>-200</ion-label>
+              <ion-label range-right>200</ion-label>
+            </ion-range>
+          </ion-item>
+        
+         <ion-item>
+           <ion-range min="20" max="80" step="2" [(ngModel)]="brightness">
+             <ion-icon small range-left name="sunny"></ion-icon>
+             <ion-icon range-right name="sunny"></ion-icon>
+           </ion-range>
+         </ion-item>
+        
+          <ion-item>
+            <ion-label>step=100, snaps, </ion-label>
+            <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary" [(ngModel)]="singleValue4"></ion-range>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>dual, step=3, snaps, </ion-label>
+            <ion-range dualKnobs="true" [(ngModel)]="dualValue2" min="21" max="72" step="3" snaps="true"></ion-range>
+          </ion-item>
+        </ion-list>
+
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/support"> Support & Formation</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/support.html" type="text/ng-template">
+  <ion-view view-title="Support & Formation">
+    <ion-content class="padding">
+        <h1> Support</h1>
+        <p></p>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/price">Presque fini!</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/price.html" type="text/ng-template">
+  <ion-view view-title="Version d'essai & Prix">
+    <ion-content class="padding">
+        <h1> Choisissez</h1>
+        <ion-list>
+
+          <ion-item>
+            <ion-label>Version Gratuite</ion-label>
+            <ion-checkbox [(ngModel)]="free" disabled="true"></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Période D'essai</ion-label>
+            <ion-checkbox [(ngModel)]="essai"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Premium Entreprise</ion-label>
+            <ion-checkbox [(ngModel)]="premium"></ion-checkbox>
+          </ion-item>
+        
+        </ion-list>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/result">Montrer l'outil(s)</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+
+<script id="templates/result.html" type="text/ng-template">
+  <ion-view view-title="Résultat">
+    <ion-content class="padding">
+        <h1> Résultat</h1>
+        <p>ici votre liste d'outils correspondants</p>
+        <ion-list>
+
+            <ion-item>
+              <ion-label>Firebase</ion-label>
+            </ion-item>
+          
+          </ion-list>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right " href="#/tab/home">Recommencer</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+</body>
+<script src="list-master.js"></script>
+
+</html>
+-->
+
 <ion-content>
 
-  <ion-list>
+ 
+
+      <ion-list>
+          <ion-item>
+            <ion-label>Game</ion-label>
+            <ion-checkbox [(ngModel)]="jeux"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>News</ion-label>
+            <ion-checkbox [(ngModel)]="cat" ></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Social Media</ion-label>
+            <ion-checkbox [(ngModel)]="com"></ion-checkbox>
+          </ion-item>
+
+          <ion-footer>
+              <ion-toolbar>
+                <ion-buttons left>
+                  <button ion-button icon-left ion-chevron-right color="primary">
+                    Previous
+                  </button>
+                </ion-buttons>
+                <ion-buttons right>
+                  <button ion-button icon-right ion-chevron-right color="secondary">
+                    Next
+                  </button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-footer>
+    <!--    
     <ion-item-sliding *ngFor="let item of currentItems">
       <button ion-item (click)="openItem(item)">
         <ion-avatar item-start>
@@ -31,5 +407,6 @@
         </button>
       </ion-item-options>
     </ion-item-sliding>
+  -->
   </ion-list>
 </ion-content>

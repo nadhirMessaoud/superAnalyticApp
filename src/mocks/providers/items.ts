@@ -7,18 +7,19 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "name": "Google Firebase",
+    "profilePic": "assets/img/speakers/firebase.png",
+    "about": "Firebase is Google's analytic tool for mobile apps.",
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "Google Firebase",
+        "profilePic": "assets/img/speakers/firebase.png",
+        "detailPic":  "assets/img/speakers/firebase1.png",
+        "about": "Firebase is Google's analytic tool for mobile apps."
       },
       {
         "name": "Charlie Cheetah",
@@ -64,8 +65,14 @@ export class Items {
 
     return this.items.filter((item) => {
       for (let key in params) {
+          console.log(key);
+          console.log(params[key]);
         let field = item[key];
         if (typeof field == 'string' && field.toLowerCase().indexOf(params[key].toLowerCase()) >= 0) {
+          console.log(field);
+          console.log(key);
+          console.log(params[key]);
+          
           return item;
         } else if (field == params[key]) {
           return item;
