@@ -1,0 +1,85 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{ 'FEATURES' | translate }}</ion-title>
+        <!--
+      <ion-buttons end>
+        <button ion-button icon-only (click)="addItem()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-buttons> -->
+    </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="padding">
+
+
+
+    <ion-list>
+
+
+        <ion-item>
+            <ion-label>A/B Testing</ion-label>
+            <ion-checkbox [(ngModel)]="abTestChkx"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Channel Attribution</ion-label>
+            <ion-checkbox [(ngModel)]="channelChkx"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Chort Analysis</ion-label>
+            <ion-checkbox [(ngModel)]="chortChkx"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Funnel Analysis</ion-label>
+            <ion-checkbox [(ngModel)]="funnelChkx"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Crash Analysis</ion-label>
+            <ion-checkbox [(ngModel)]="crashChkx"></ion-checkbox>
+        </ion-item>
+            <ion-item>
+                <ion-label>Predictive Analysis</ion-label>
+                <ion-checkbox [(ngModel)]="predectiveChkx"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>In-App Events Tracking</ion-label>
+                <ion-checkbox [(ngModel)]="inappChkx"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Push Notifications</ion-label>
+                <ion-checkbox [(ngModel)]="pushChkx"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Retention Tracking</ion-label>
+                <ion-checkbox [(ngModel)]="retentionChkx"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Revenue Tracking</ion-label>
+                <ion-checkbox [(ngModel)]="revenueChkx"></ion-checkbox>
+            </ion-item>
+    </ion-list>
+
+
+
+
+    <ion-footer>
+        <ion-toolbar>
+            <ion-buttons left>
+                <button ion-button icon-left ion-chevron-right color="primary" (click)='backToUsers()'>
+                    Previous
+                </button>
+            </ion-buttons>
+            <ion-buttons right>
+                <button ion-button icon-right ion-chevron-right color="secondary" (click)='goToSupport()'>
+                    Next
+                </button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-footer>
+</ion-content>

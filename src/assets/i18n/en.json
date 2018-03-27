@@ -1,6 +1,13 @@
 {
   "BACK_BUTTON_TEXT": "Back",
-
+  "PLATFORMS" : "Platforms",
+  "NB_USERS": "Number of users",
+  "FEATURES" : "Features",
+  "SUPPORT" : "Support & Training",
+  "PRICE" : "Pricing",
+  "RESULTS" : "Research Results !",
+  "RESTART" : "Restart",
+  "SAVE" : "Save Results",
   "NAME": "Name",
   "EMAIL": "Email",
   "USERNAME": "Username",

@@ -19,7 +19,10 @@ export class Items {
         "name": "Google Firebase",
         "profilePic": "assets/img/speakers/firebase.png",
         "detailPic":  "assets/img/speakers/firebase1.png",
-        "about": "Firebase is Google's analytic tool for mobile apps."
+        "about": "Firebase is Google's analytic tool for mobile apps.",
+        "platforms": ["android", "ios", "unity", "web","c++"],
+        "users" : 400,
+        "price": ["free", "premium", "on"],
       },
       {
         "name": "Charlie Cheetah",

@@ -1,0 +1,70 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{ 'PRICE' | translate }}</ion-title>
+        <!--
+      <ion-buttons end>
+        <button ion-button icon-only (click)="addItem()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-buttons> -->
+    </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="padding">
+
+    <ion-list>
+        <ion-list-header>
+            Offers
+        </ion-list-header>
+        
+        <ion-item>
+            <ion-label>Version Gratuite</ion-label>
+            <ion-checkbox [(ngModel)]="free"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Période D'essai</ion-label>
+            <ion-checkbox [(ngModel)]="essai"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Premium Entreprise</ion-label>
+            <ion-checkbox [(ngModel)]="premium"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-list-header>
+            Max Budget Per Month
+        </ion-list-header>
+
+        <ion-item>
+            <ion-range min="0" max="2000" [(ngModel)]="price" pin="true" color="danger">
+                <ion-label range-left>0</ion-label>
+                <ion-label range-right>2000</ion-label>
+            </ion-range>
+        </ion-item>
+
+    </ion-list>
+
+
+
+    <ion-footer>
+        <ion-toolbar>
+            <ion-buttons left>
+                <button ion-button icon-left ion-chevron-right color="primary" (click)='backToSupport()'>
+                    Previous
+                </button>
+            </ion-buttons>
+            <ion-buttons right>
+                <button ion-button icon-right ion-chevron-right color="secondary" (click)='goToResult()'>
+                    Next
+                </button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-footer>
+</ion-content>

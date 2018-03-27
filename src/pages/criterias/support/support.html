@@ -1,0 +1,88 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{ 'SUPPORT' | translate }}</ion-title>
+        <!--
+      <ion-buttons end>
+        <button ion-button icon-only (click)="addItem()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-buttons> -->
+    </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="padding">
+
+
+
+    <ion-list>
+        <ion-list-header>
+            Support
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>24/7 (Live Response)</ion-label>
+            <ion-checkbox [(ngModel)]="always"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Business Hours</ion-label>
+            <ion-checkbox [(ngModel)]="busHours"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Online</ion-label>
+            <ion-checkbox [(ngModel)]="online"></ion-checkbox>
+        </ion-item>
+
+    </ion-list>
+
+
+
+    <ion-list>
+        <ion-list-header>
+            Trainning
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>In Person</ion-label>
+            <ion-checkbox [(ngModel)]="inPerson"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Live Online</ion-label>
+            <ion-checkbox [(ngModel)]="liveOnline"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Webinars</ion-label>
+            <ion-checkbox [(ngModel)]="webinars"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Documentation</ion-label>
+            <ion-checkbox [(ngModel)]="doc"></ion-checkbox>
+        </ion-item>
+
+
+
+
+    </ion-list>
+
+    <ion-footer>
+        <ion-toolbar>
+            <ion-buttons left>
+                <button ion-button icon-left ion-chevron-right color="primary" (click)='backToFeatures()'>
+                    Previous
+                </button>
+            </ion-buttons>
+            <ion-buttons right>
+                <button ion-button icon-right ion-chevron-right color="secondary" (click)='goToPrice()'>
+                    Next
+                </button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-footer>
+</ion-content>

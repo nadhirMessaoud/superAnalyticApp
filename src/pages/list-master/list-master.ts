@@ -3,6 +3,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers/providers';
+import { Platforms } from '../criterias/platforms/platforms';
 
 @IonicPage()
 @Component({
@@ -11,11 +12,11 @@ import { Items } from '../../providers/providers';
 })
 export class ListMasterPage {
   currentItems: Item[];
-
+  
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
+    
   }
-
   /**
    * The view loaded, let's query our items for the list
    */
@@ -37,8 +38,12 @@ export class ListMasterPage {
   }
 
   goToPlatforms(){
-    this.navCtrl.push('PlatformPage');
+    this.navCtrl.setRoot('Platforms');
 
+  }
+
+  returnToCategories(){
+    this.navCtrl.setRoot('WelcomePage');
   }
   /**
    * Delete an item from the list of items.

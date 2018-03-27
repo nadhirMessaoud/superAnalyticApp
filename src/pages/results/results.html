@@ -1,0 +1,38 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{ 'RESULTS' | translate }}</ion-title>
+        <!--
+      <ion-buttons end>
+        <button ion-button icon-only (click)="addItem()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-buttons> -->
+    </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="padding">
+
+    <ion-list>
+        <ion-list-header>
+            Best Tools For You !
+        </ion-list-header>
+
+
+    </ion-list>
+
+
+
+    <ion-footer>
+        <div padding>
+
+            <button ion-button block (click)="saveResult()">{{ 'SAVE' | translate }}</button>
+            <button ion-button block (click)="restart()">{{ 'RESTART' | translate }}</button>
+        </div>
+
+
+    </ion-footer>
+</ion-content>

@@ -1,4 +1,4 @@
-angular.module('ionicApp', ['ionic'])
+angular.module('ionicApp', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -25,13 +25,13 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
-    .state('tabs.platforms', {
+    .state('platforms', {
       url: "/platforms",
-      views: {
-        'home-tab': {
-          templateUrl: "templates/platforms.html"
-        }
-      }
+     // views: {
+      //  'home-tab': {
+        templateUrl: "../criterias/platforms.html"
+      //  }
+    //  }
     })
     .state('tabs.users', {
       url: "/users",
@@ -98,3 +98,7 @@ angular.module('ionicApp', ['ionic'])
 .controller('HomeTabCtrl', function($scope) {
   console.log('HomeTabCtrl');
 });
+
+function displayMsg(){
+  console.log("nothing to display");
+}
