@@ -39,6 +39,7 @@ export class SettingsPage {
     public formBuilder: FormBuilder,
     public navParams: NavParams,
     public translate: TranslateService) {
+
   }
 
   _buildForm() {
@@ -87,6 +88,15 @@ export class SettingsPage {
 
       this._buildForm();
     });
+  }
+
+  loadData(){
+    var result = JSON.parse(localStorage.getItem("myData"));
+    
+    console.log("LOADED DATA JS(settings )... : \n" + JSON.stringify(result, null, 4));
+
+    document.getElementById("result").innerHTML = JSON.stringify(result, null, 4);
+
   }
 
   ngOnChanges() {

@@ -23,17 +23,17 @@
         
         <ion-item>
             <ion-label>Version Gratuite</ion-label>
-            <ion-checkbox [(ngModel)]="free"></ion-checkbox>
+            <ion-checkbox [(ngModel)]="free" (ionChange)='onCheckPricing()'></ion-checkbox>
         </ion-item>
 
         <ion-item>
             <ion-label>Période D'essai</ion-label>
-            <ion-checkbox [(ngModel)]="essai"></ion-checkbox>
+            <ion-checkbox [(ngModel)]="essai" (ionChange)='onCheckPricing()'></ion-checkbox>
         </ion-item>
 
         <ion-item>
             <ion-label>Premium Entreprise</ion-label>
-            <ion-checkbox [(ngModel)]="premium"></ion-checkbox>
+            <ion-checkbox [(ngModel)]="premium" (ionChange)='onCheckPricing()'></ion-checkbox>
         </ion-item>
     </ion-list>
 
@@ -41,11 +41,11 @@
         <ion-list-header>
             Max Budget Per Month
         </ion-list-header>
-
         <ion-item>
-            <ion-range min="0" max="2000" [(ngModel)]="price" pin="true" color="danger">
+            <ion-range min="0" max="2000" [(ngModel)]="price" pin="true" color="danger" (ionChange)='onCheckPricing()'>
                 <ion-label range-left>0</ion-label>
-                <ion-label range-right>2000</ion-label>
+                <ion-label range-right>2000 (en 
+                    )</ion-label>
             </ion-range>
         </ion-item>
 

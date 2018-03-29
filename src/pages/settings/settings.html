@@ -7,8 +7,19 @@
 </ion-header>
 
 <ion-content>
+    
+    <div id="result"></div>
 
-  <form [formGroup]="form" *ngIf="settingsReady">
+    <ion-footer>
+        <div padding>
+
+            <button ion-button block (click)="loadData()"> Load Data</button>
+        </div>
+
+
+    </ion-footer>
+
+ <!-- <form [formGroup]="form" *ngIf="settingsReady">
     <ion-list *ngIf="page == 'main'">
       <ion-item>
         <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
@@ -41,5 +52,6 @@
       </ion-item>
     </ion-list>
   </form>
+-->
 
 </ion-content>

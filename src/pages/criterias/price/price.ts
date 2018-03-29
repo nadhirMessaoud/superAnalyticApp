@@ -9,17 +9,24 @@ import { Result } from '../../results/results';
   templateUrl: 'price.html'
 })
 export class Price {
-
+  public receivedD;
+  public price;
   constructor(public navCtrl: NavController, navParams: NavParams) {
+    this.receivedD = navParams.data;
+    console.log("RECEIVED DATA from support: \n" + JSON.stringify(this.receivedD, null, 4));
+    this.price = {};
   }
 
-
+  onCheckPricing(){
+    this.receivedD.data["price"] = this.price;
+    return this.receivedD;
+  }
   goToResult(){
-    this.navCtrl.setRoot('Result');
+    this.navCtrl.setRoot('Result', this.onCheckPricing() );
   }
   
   backToSupport(){
-    this.navCtrl.setRoot('Support');
+    this.navCtrl.pop();
   }
 
      

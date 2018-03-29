@@ -18,41 +18,62 @@ export class Items {
       {
         "name": "Google Firebase",
         "profilePic": "assets/img/speakers/firebase.png",
-        "detailPic":  "assets/img/speakers/firebase1.png",
+        "detailPic": "assets/img/speakers/firebase1.png",
         "about": "Firebase is Google's analytic tool for mobile apps.",
-        "platforms": ["android", "ios", "unity", "web","c++"],
-        "users" : 400,
+        "platforms": ["android", "ios", "unity", "web", "c++"],
+        "users": 400,
         "price": ["free", "premium", "on"],
+        "keywords": ["free", "premium", "on"]
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "",
+        "profilePic": "",
+        "detailPic": "assets/img/speakers/",
+        "about": "",
+        "platforms": ["", ""],
+        "users": 1000,
+        "price": ["", ""],
+        "keywords": ["", ""],
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "name": "",
+        "profilePic": "",
+        "detailPic": "assets/img/speakers/",
+        "about": "",
+        "platforms": ["", ""],
+        "users": 1000,
+        "price": ["", ""],
+        "keywords": ["", ""],
       },
       {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "name": "",
+        "profilePic": "",
+        "detailPic": "assets/img/speakers/",
+        "about": "",
+        "platforms": ["", ""],
+        "users": 1000,
+        "price": ["", ""],
+        "keywords": ["", ""],
       },
       {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
+        "name": "",
+        "profilePic": "",
+        "detailPic": "assets/img/speakers/",
+        "about": "",
+        "platforms": ["", ""],
+        "users": 1000,
+        "price": ["", ""],
+        "keywords": ["", ""],
       },
       {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "name": "",
+        "profilePic": "",
+        "detailPic": "assets/img/speakers/",
+        "about": "",
+        "platforms": ["", ""],
+        "users": 1000,
+        "price": ["", ""],
+        "keywords": ["", ""],
       }
     ];
 
@@ -68,14 +89,14 @@ export class Items {
 
     return this.items.filter((item) => {
       for (let key in params) {
-          console.log(key);
-          console.log(params[key]);
+        console.log(key);
+        console.log(params[key]);
         let field = item[key];
         if (typeof field == 'string' && field.toLowerCase().indexOf(params[key].toLowerCase()) >= 0) {
           console.log(field);
           console.log(key);
           console.log(params[key]);
-          
+
           return item;
         } else if (field == params[key]) {
           return item;

@@ -16,7 +16,7 @@
 
 <ion-content class="padding">
 
-    <ion-list radio-group [(ngModel)]="nbUsers">
+    <ion-list radio-group [(ngModel)]="nbUsers"  (ionChange)='changeRadio()'>
         <ion-item>
             <ion-label> 1 - 100 </ion-label>
             <ion-radio value="nb100" ></ion-radio>

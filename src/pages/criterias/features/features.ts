@@ -9,17 +9,25 @@ import { Support } from '../support/support';
   templateUrl: 'features.html'
 })
 export class Feature {
+  public receivedD;
+  public feat;
 
   constructor(public navCtrl: NavController, navParams: NavParams) {
+    this.receivedD = navParams.data;
+    this.feat = {};
   }
 
+  onCheckFeature(): object{
+    this.receivedD.data["features"] = this.feat;
+    return this.receivedD;
+  }
 
   goToSupport(){
-    this.navCtrl.setRoot('Support');
+    this.navCtrl.push('Support', this.onCheckFeature());
   }
   
   backToUsers(){
-    this.navCtrl.setRoot('Users');
+    this.navCtrl.pop();
   }
 
   
