@@ -1,9 +1,9 @@
 {
   "BACK_BUTTON_TEXT": "Back",
-    "CATEGORIES": "Categories",
-  "PLATFORMS" : "Platforms",
-  "NB_USERS": "Number of users",
-  "FEATURES" : "Features",
+    "CATEGORIES": "My Application's Categories",
+  "PLATFORMS" : "Supported Languages/Frameworks",
+  "NB_USERS": "Actual App's Users Number",
+  "FEATURES" : "Analytic Tool's Features",
   "SUPPORT" : "Support & Training",
   "PRICE" : "Pricing",
   "RESULTS" : "Research Results !",
@@ -26,7 +26,7 @@
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
 
   "TUTORIAL_SLIDE1_TITLE": "Welcome to the Analytic Tools Assistant !",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Analytic Tools Assistant</b> is a mobile app which help you to choose the best analytic tool for you.",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Analytic Tools Assistant</b> is a mobile application which help you to choose the best analytic tool for you.",
 
   "TUTORIAL_SLIDE2_TITLE": "How to use Analytic Tools Assistant",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Follow steps refining the research with <b>pertinent criterias</b> until result display.",

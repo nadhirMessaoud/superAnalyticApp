@@ -14,9 +14,10 @@ page-tutorial {
 
   .slide-image {
 
-    height:300px;
+/*    height:300px;
     width:420px;
-
+*/    max-height: 40%;
+    max-width: 60%;
     margin: 36px 0;
   }
 

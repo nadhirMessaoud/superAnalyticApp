@@ -1,13 +1,13 @@
 import { Api } from './api/api';
-import { Items } from '../mocks/providers/items';
+import { Tools } from '../mocks/providers/tools';
 import { Criterias } from '../mocks/providers/criterias';
-import { Settings } from './settings/settings';
+import { SavedResults } from './savedresults/savedresults';
 import { User } from './user/user';
 
 export {
     Api,
     Criterias,
-    Items,
-    Settings,
+    Tools,
+    SavedResults,
     User
 };

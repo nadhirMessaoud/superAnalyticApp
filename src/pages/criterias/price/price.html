@@ -1,5 +1,4 @@
 <ion-header>
-
     <ion-navbar>
         <ion-title>{{ 'PRICE' | translate }}</ion-title>
         <!--
@@ -9,49 +8,42 @@
         </button>
       </ion-buttons> -->
     </ion-navbar>
-
 </ion-header>
-
-
 
 <ion-content class="padding">
 
     <ion-list>
-        <ion-list-header>
+        <div class="item item-divider"> 
             Offers
-        </ion-list-header>
-        
+          </div>
         <ion-item>
-            <ion-label>Version Gratuite</ion-label>
-            <ion-checkbox [(ngModel)]="free" (ionChange)='onCheckPricing()'></ion-checkbox>
+            <ion-label>Free Version</ion-label>
+            <ion-checkbox [(ngModel)]="price.free" (ionChange)='onCheckPricing()'></ion-checkbox>
         </ion-item>
-
         <ion-item>
-            <ion-label>Période D'essai</ion-label>
-            <ion-checkbox [(ngModel)]="essai" (ionChange)='onCheckPricing()'></ion-checkbox>
+            <ion-label>Trial Period</ion-label>
+            <ion-checkbox [(ngModel)]="price.trial" (ionChange)='onCheckPricing()'></ion-checkbox>
         </ion-item>
-
         <ion-item>
             <ion-label>Premium Entreprise</ion-label>
-            <ion-checkbox [(ngModel)]="premium" (ionChange)='onCheckPricing()'></ion-checkbox>
+            <ion-checkbox [(ngModel)]="price.premium" (ionChange)='onCheckPricing()'></ion-checkbox>
         </ion-item>
     </ion-list>
 
     <ion-list>
-        <ion-list-header>
-            Max Budget Per Month
-        </ion-list-header>
+            <div class="item item-divider"> 
+                    Max Budget Per Month
+                  </div>
         <ion-item>
-            <ion-range min="0" max="2000" [(ngModel)]="price" pin="true" color="danger" (ionChange)='onCheckPricing()'>
+            <ion-range min="0" max="2000" [(ngModel)]="price.budget" pin="true" color="danger" (ionChange)='onCheckPricing()'>
                 <ion-label range-left>0</ion-label>
-                <ion-label range-right>2000 (en 
-                    )</ion-label>
+                <ion-label range-right>2000 Euros
+                </ion-label>
             </ion-range>
         </ion-item>
 
+        <ion-item _ngcontent-c0="" class="item item-block item-ios item-range"><div class="item-inner"><div class="input-wrapper"><!----><ion-range _ngcontent-c0="" color="dark" dualknobs="true" pin="true" class="range range-ios range-ios-dark range-has-pin ng-valid ng-dirty ng-touched"><ion-label _ngcontent-c0="" range-left="" class="label label-ios" id="lbl-7">-0</ion-label><div class="range-slider"><!----><div class="range-bar" role="presentation"></div><div class="range-bar range-bar-active" role="presentation" style="left: 52%; right: 7%;"></div><div class="range-knob-handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-disabled="false" aria-labelledby="lbl-7" tabindex="0" aria-valuenow="52" style="left: 52%;"><!----><div class="range-pin" role="presentation">52</div><div class="range-knob" role="presentation"></div></div><!----><div class="range-knob-handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-disabled="false" aria-labelledby="lbl-7" tabindex="0" aria-valuenow="93" style="left: 93%;"><!----><div class="range-pin" role="presentation">93</div><div class="range-knob" role="presentation"></div></div></div><ion-label _ngcontent-c0="" range-right="" class="label label-ios">100</ion-label></ion-range></div><!----></div><div class="button-effect"></div></ion-item>
     </ion-list>
-
-
 
     <ion-footer>
         <ion-toolbar>

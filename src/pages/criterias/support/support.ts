@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Feature } from '../features/features';
-import { Price } from '../price/price';
+//import { Feature } from '../features/features';
+//import { Price } from '../price/price';
 
 @IonicPage()
 @Component({
@@ -13,7 +13,7 @@ export class Support {
   public support;
   constructor(public navCtrl: NavController, navParams: NavParams) {
     this.receivedD = navParams.data;
-    console.log("RECEIVED DATA from features: \n" + JSON.stringify(this.receivedD, null, 4));
+   // console.log("RECEIVED DATA from features: \n" + JSON.stringify(this.receivedD, null, 4));
     this.support = {};
   }
 

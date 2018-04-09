@@ -1,5 +1,4 @@
 <ion-header>
-
     <ion-navbar>
         <ion-title>{{ 'RESULTS' | translate }}</ion-title>
         <!--
@@ -9,10 +8,7 @@
         </button>
       </ion-buttons> -->
     </ion-navbar>
-
 </ion-header>
-
-
 
 <ion-content class="padding">
 
@@ -20,20 +16,25 @@
         <ion-list-header>
             Best Tools For You !
         </ion-list-header>
-
         <div id="resultsData"></div>
-
     </ion-list>
-
-
+    <ion-scroll style="height: 200px">
+        <ion-list>
+            <button ion-item (click)="openItem(item)" *ngFor="let item of results">
+                <ion-avatar item-start>
+                   <img [src]="item.profilePic" />
+                </ion-avatar>
+                <h2>{{item.name}}</h2>
+                <p>{{item.about}}</p>
+                <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+            </button>
+        </ion-list>
+    </ion-scroll>
 
     <ion-footer>
         <div padding>
-
-            <button ion-button block (click)="saveResult()">{{ 'SAVE' | translate }}</button>
+            <button ion-button block (click)="savePOP()">{{ 'SAVE' | translate }}</button>
             <button ion-button block (click)="restart()">{{ 'RESTART' | translate }}</button>
         </div>
-
-
     </ion-footer>
 </ion-content>

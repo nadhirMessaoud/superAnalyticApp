@@ -19,10 +19,9 @@
 
 
     <ion-list>
-        <ion-list-header>
+        <div class="item item-divider">
             Support
-        </ion-list-header>
-
+        </div>
         <ion-item>
             <ion-label>24/7 (Live Response)</ion-label>
             <ion-checkbox [(ngModel)]="support.live24_7"></ion-checkbox>
@@ -43,28 +42,29 @@
 
 
     <ion-list>
-        <ion-list-header>
-            Trainning
-        </ion-list-header>
+        <div class="item item-divider">
+            Training
+        </div>
 
-        <ion-item>
-            <ion-label>In Person</ion-label>
-            <ion-checkbox [(ngModel)]="support.inPerson"></ion-checkbox>
-        </ion-item>
+            <ion-item>
+                <ion-label>In Person</ion-label>
+                <ion-checkbox [(ngModel)]="support.inPerson"></ion-checkbox>
+            </ion-item>
 
-        <ion-item>
-            <ion-label>Live Online</ion-label>
-            <ion-checkbox [(ngModel)]="support.liveOnline"></ion-checkbox>
-        </ion-item>
+            <ion-item>
+                <ion-label>Live Online</ion-label>
+                <ion-checkbox [(ngModel)]="support.liveOnline"></ion-checkbox>
+            </ion-item>
 
-        <ion-item>
-            <ion-label>Webinars</ion-label>
-            <ion-checkbox [(ngModel)]="support.webinars"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Documentation</ion-label>
-            <ion-checkbox [(ngModel)]="support.doc"></ion-checkbox>
-        </ion-item>
+
+            <ion-item>
+                <ion-label>Webinars</ion-label>
+                <ion-checkbox [(ngModel)]="support.webinars"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Documentation</ion-label>
+                <ion-checkbox [(ngModel)]="support.doc"></ion-checkbox>
+            </ion-item>
 
 
 

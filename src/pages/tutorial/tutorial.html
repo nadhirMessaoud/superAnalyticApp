@@ -6,12 +6,28 @@
   </ion-navbar>
 </ion-header>
 
+
+
+
+
 <ion-content no-bounce>
   <ion-slides pager="true" dir="{{dir}}" (ionSlideWillChange)="onSlideChangeStart($event)">
     <ion-slide *ngFor="let slide of slides">
-      <img [src]="slide.image" class="slide-image"/>
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
+      <ion-grid>
+        <ion-row>
+          <ion-col >
+            <img [src]="slide.image" class="slide-image" />
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+            <p [innerHTML]="slide.description"></p>
+          </ion-col >
+        </ion-row>
+      </ion-grid>
+
+
     </ion-slide>
     <ion-slide>
       <img src="assets/img/ready.gif" class="slide-image" />

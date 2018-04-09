@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
-import { Platforms } from '../criterias/platforms/platforms';
-import { Criteria } from '../../models/criteria';
-import { Criterias } from '../../providers/providers';
+import { Tools } from '../../providers/providers';
+//import { Platforms } from '../criterias/platforms/platforms';
+//import { Criteria } from '../../models/criteria';
+//import { Criterias } from '../../providers/providers';
 
 @IonicPage()
 @Component({
@@ -19,7 +19,7 @@ export class ListMasterPage {
   game: boolean;
   news: boolean;
   media: boolean;
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Tools, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
     console.log("DATA before constructor: \n" + JSON.stringify(this.cat, null, 4));
 
@@ -52,7 +52,7 @@ export class ListMasterPage {
         cat: this.cat
       }
     }
-    console.log("SEND DATA to Platform: \n" + JSON.stringify(send, null, 4));
+    //console.log("SEND DATA to Platform: \n" + JSON.stringify(send, null, 4));
 
     return send;
   }
@@ -64,7 +64,7 @@ export class ListMasterPage {
     //console.log("categories: \n" + this.changedCat());
     let getData = this.changedCat();
 
-    console.log("SENDING DATA to Platform: \n" + JSON.stringify(getData, null, 4));
+    //console.log("SENDING DATA to Platform: \n" + JSON.stringify(getData, null, 4));
     this.navCtrl.push('Platforms', getData);
   }
 

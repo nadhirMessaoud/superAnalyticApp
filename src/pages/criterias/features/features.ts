@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Users } from '../users/users';
-import { Support } from '../support/support';
+//import { Users } from '../users/users';
+//import { Support } from '../support/support';
 
 @IonicPage()
 @Component({
