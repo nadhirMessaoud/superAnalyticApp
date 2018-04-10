@@ -13,11 +13,11 @@ import { Item } from '../../models/item';
 export class Result {
   public keyData;
   public receivedD;
-  results : any= [];
+  results: any = [];
   constructor(public navCtrl: NavController, navParams: NavParams, public items: Tools, private alertCtrl: AlertController) {
     this.receivedD = navParams.data;
     console.log("RECEIVED DATA from pricing: \n" + JSON.stringify(this.receivedD, null, 4));
-    
+
 
 
 
@@ -47,8 +47,8 @@ export class Result {
         {
           text: 'Save',
           handler: data => {
-            if (this.receivedD) {
-              this.saveResult(data.searchName, this.receivedD);
+            if (this.results) {
+              this.saveResult(data.searchName, this.results);
             } else {
               return false;
             }
@@ -89,12 +89,12 @@ export class Result {
       if (typeof obj[i] == 'object') {
         objects = objects.concat(this.getObjectsVal(obj[i], val));
       } else if (Array.isArray(obj[i])) {
-        for(var j = 0; i< obj[i].length ; j++)
-        if(obj[i][j] == val) {objects.push(obj)}
+        for (var j = 0; i < obj[i].length; j++)
+          if (obj[i][j] == val) { objects.push(obj) }
         // TODO Manage this arrays !
-      }else
+      } else
         //if key matches and value matches or if key matches and value is not passed (eliminating the case where key matches but passed value does not)
-        if ( obj[i] == val ||  val == '') { //
+        if (obj[i] == val || val == '') { //
           objects.push(obj);
         } else if (obj[i] == val) {
           //only add if the object is not already in the array
@@ -129,8 +129,8 @@ export class Result {
       if (typeof obj[i] == 'object') {
         objects = objects.concat(this.getKeys(obj[i], val));
       } else if (Array.isArray(obj[i])) {
-        for(var j = 0; i< obj[i].length ; j++)
-        if(obj[i][j] == val) {objects.push(i)}
+        for (var j = 0; i < obj[i].length; j++)
+          if (obj[i][j] == val) { objects.push(i) }
         // TODO Manage this arrays !
       } else if (obj[i] == val) {
         objects.push(i);
@@ -148,34 +148,34 @@ export class Result {
 
     var keyWords = this.getKeys(this.receivedD, true);
     console.log("SEARCHING for SELECTED KEYWORDS: \n" + JSON.stringify(keyWords, null, 4));
-    
+
     console.log("SEARCHING INTO: \n" + JSON.stringify(this.items, null, 4));
-   
-    var analTools= [];
+
+    var analTools = [];
     var keyTools = [];
 
-  //  for (var i = 0; i < keyWords.length; i++) {
- //}
+    //  for (var i = 0; i < keyWords.length; i++) {
+    //}
 
-      console.log("searching actual keywords:" +keyWords); 
-      keyTools = keyTools.concat(this.items.query({
-        keywords : keyWords
-      }));
-      
-      console.log("TOOOOOOLS: \n" + JSON.stringify(this.getValues(keyTools, 'name' ), null, 4)+ '\n...............');
+    console.log("searching actual keywords:" + keyWords);
+    keyTools = keyTools.concat(this.items.query({
+      keywords: keyWords
+    }));
 
-
-      //console.log("Tool found: \n" + JSON.stringify(atool, null, 4));
-      //analTools.concat(atool );
-      //console.log("analTools: \n" + JSON.stringify(analTools, null, 4));
-      //var myTool = this.getObjectsVal(this.items,keyWords[i]);
-      //.concat();
+    console.log("TOOOOOOLS: \n" + JSON.stringify(this.getValues(keyTools, 'name'), null, 4) + '\n...............');
 
 
-   
-    
+    //console.log("Tool found: \n" + JSON.stringify(atool, null, 4));
+    //analTools.concat(atool );
+    //console.log("analTools: \n" + JSON.stringify(analTools, null, 4));
+    //var myTool = this.getObjectsVal(this.items,keyWords[i]);
+    //.concat();
+
+
+
+
     this.results = keyTools
-    console.log("SEARCHING RESULTS: " +"\n" + JSON.stringify(this.results, null, 4));
+    console.log("SEARCHING RESULTS: " + "\n" + JSON.stringify(this.results, null, 4));
 
     /*.filter( tool =>
       tool.na
@@ -185,13 +185,21 @@ export class Result {
 
   }
 
- 
+
 
   saveResult(name, data) {
-    localStorage.setItem(name, JSON.stringify(data, null, 4));
+
+    var myName = name;
+    var oldItems = JSON.parse(localStorage.getItem('resultsArray')) || [];
+    data = {myName : data}
+    oldItems.push(data);
+    localStorage.setItem('resultsArray', JSON.stringify(oldItems));
+
+
+   // localStorage.setItem(name, JSON.stringify(data, null, 4));
     //console.log("KEYWORDS HERE: \n" + JSON.stringify(this.getKeys(data, true), null, 4));
-    var result = JSON.parse(localStorage.getItem("my"));
-    document.getElementById("resultsData").innerHTML = JSON.stringify(result, null, 4);
+   // var result = JSON.parse(localStorage.getItem("my"));
+   // document.getElementById("resultsData").innerHTML = JSON.stringify(result, null, 4);
     // this.navCtrl.setRoot('SavedResearchs');
   }
 

@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Tools } from '../../providers/providers';
+import { Item } from '../../models/item';
 import { SavedResults } from '../../providers/providers';
 
 /**
@@ -17,12 +18,13 @@ import { SavedResults } from '../../providers/providers';
 })
 export class SavedResultsPage {
   
-
+  resultsArray: any = [];
   constructor(public navCtrl: NavController,
     public savedresults: SavedResults,
     public formBuilder: FormBuilder,
     public navParams: NavParams,
     public translate: TranslateService) {
+      this.loadData();
 
   }
 
@@ -30,11 +32,11 @@ export class SavedResultsPage {
 
   loadData(){
     // DISPLAY ALL SAVED DATA ... with prefix 'savedResearch' ....
-    var result = JSON.parse(localStorage.getItem("myData"));
+    this.resultsArray = JSON.parse(localStorage.getItem("myResultsArray"));
     
-    //console.log("LOADED DATA JS(settings )... : \n" + JSON.stringify(result, null, 4));
+    console.log("LOADED DATA JS(savedResults )... : \n" + JSON.stringify(this.resultsArray, null, 4));
 
-    document.getElementById("result").innerHTML = JSON.stringify(result, null, 4);
+    //document.getElementById("results").innerHTML = JSON.stringify(this.results, null, 4);
 
   }
 

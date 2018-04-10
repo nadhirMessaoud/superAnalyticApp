@@ -1,14 +1,33 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>{{ pageTitle }}</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{ pageTitle }}</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 <ion-content>
-    
+
     <div id="result"></div>
+
+    <div *ngFor="let result of resultsArray">
+
+        <ion-scroll scrollY="true" style="height: 200px">
+            <ion-list>
+                <button ion-item (click)="openItem(item)" *ngFor="let item of result">
+                    <ion-avatar item-start>
+                        <img [src]="item.profilePic" />
+                    </ion-avatar>
+                    <h2>{{item.name}}</h2>
+                    <p>{{item.about}}</p>
+                    <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+                </button>
+            </ion-list>
+        </ion-scroll>
+
+    </div>
+
+
     <ion-footer>
         <div padding>
             <button ion-button block (click)="loadData()"> Load Data</button>

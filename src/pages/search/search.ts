@@ -24,8 +24,8 @@ export class SearchPage {
       this.currentItems = [];
       return;
     }
-    this.currentItems = this.items.query({
-      keywords : val
+    this.currentItems = this.items.searchQuery({
+      name : val
     });
   }
 

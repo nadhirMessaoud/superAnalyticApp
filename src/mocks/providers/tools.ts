@@ -255,17 +255,6 @@ export class Tools {
       return null;
     });
   }
-
-  
-
-  areAllKeyWordsThere(array1, array2){
-    let areThere :boolean = true;
-    for(let keys in array1){
-
-    }
-
-    return areThere;
-  }
   
   add(item: Item) {
     this.items.push(item);

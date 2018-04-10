@@ -18,7 +18,7 @@
         </ion-list-header>
         <div id="resultsData"></div>
     </ion-list>
-    <ion-scroll style="height: 200px">
+    <ion-scroll scrollY="true" style="height: 200px">
         <ion-list>
             <button ion-item (click)="openItem(item)" *ngFor="let item of results">
                 <ion-avatar item-start>
